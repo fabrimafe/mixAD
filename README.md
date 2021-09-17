@@ -1,6 +1,5 @@
 # Reference-free detection of genomic mixtures from low-coverage data
-Used in Neandertal and Denisovan DNA from Pleistocene sediments, April 2017 Science 356(6338):eaam969
-dx.doi.org/10.1126/science.aam9695
+Used in [Neandertal and Denisovan DNA from Pleistocene sediments, April 2017 Science 356(6338):eaam969](dx.doi.org/10.1126/science.aam9695)
 
 mix_noref implements a maximum likelihood estimate of the proportions of genomic mixtures, assessing wheter 1,2 or 3 or more genomes appear in the DNA samples and the phylogenetic relationships between the different genomic components (if present).
 Note that the maximum likelihood formula implemented here makes the assumption of independent sites and neglects deamination. Hence we caution that regions dense in mutations, as well as mismappings, could lead to inflated likelihood estimates. For this reason in Slon et al.,2017 we examined separately transversion mutations (excluding deamination) and removed polymorphisms in close proximity. Such filters should be optimized depending on the specific dataset. In addition we suggest to consider as significant only mixtures strongly supported by low p-values/relative-likelihoods, e.g. <0.001.
