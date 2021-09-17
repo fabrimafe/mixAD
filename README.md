@@ -13,10 +13,12 @@ The R code requires the installation of the packages optimx and tidyverse.
 A typical command line is:
 ./mix_noref.R -i inputfile -o outputfile
 where inputfile is a 5 column tab separated file with position as first column and then the counts of A,G,C,T bases for each position, e.g.
-1 0 0 10 12
-2 0 20 0 0
-....
-16568 0 0 9 0
+
+- 1 0 0 10 12
+- 2 0 20 0 0
+- ....
+- 16568 0 0 9 0
+
 To extract such tables from a .bam file one can use samtools mpileup as in bam2tab.sh
 
 The output file is a table structured with the models (1,2 or 3 genomes) represented as rows, from best to worst. The fields are:
