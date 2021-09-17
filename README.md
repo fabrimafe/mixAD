@@ -14,10 +14,12 @@ A typical command line is:
 ./mix_noref.R -i inputfile -o outputfile
 where inputfile is a 5 column tab separated file with position as first column and then the counts of A,G,C,T bases for each position, e.g.
 
-- 1 0 0 10 12
+- 1 0 0 10 10
 - 2 0 20 0 0
 - ....
+- 16567 0 0 9 1
 - 16568 0 0 9 0
+- 16569 0 9 0 0
 
 To extract such tables from a .bam file one can use samtools mpileup as in bam2tab.sh
 
