@@ -21,17 +21,17 @@ where inputfile is a 5 column tab separated file with position as first column a
 To extract such tables from a .bam file one can use samtools mpileup as in bam2tab.sh
 
 The output file is a table structured with the models (1,2 or 3 genomes) represented as rows, from best to worst. The fields are:
--ngenomes: number of genomes in the model: 1,2 or 3/more
--p1,p2 and p3: the proportions of the genomes.
--perr: error rate. Note that error rates here are the probability that a base is mutated at random into one of the 4 bases.
--X1_2: for the model with 2 genomes, divergence between genome 1 and 2
--X1_1_2, X1_2_1, X1_2_2, X1_2_3: for the model with 3 genomes, the proportion of sites in which genomes 2 and 3 differ or are the same. For example, X1_1_2 indicates those for which the third genome differ from genome 1 and 2, X1_2_1 those for which the second differs from genome 1 and 3, and so on.
--value: log likelihood of the model
--xtime: time to compute the model
--degree.freedom
--AIC: Akaike information criterion for the model. Note that because of the composite-likelihood approximation these values should be considered meaningful only in relative terms. Used to sort models from best to worst and to compute relative likelihoods.
--lik_ratio_test_2g, lik_ratio_test_3g: p-value based on the likelihood ratio test comparing the model with 2genomes (or 3) versus the model in the given row
--relL_vsbest,relL_vs2ndbest: relative likelihood comparing the model in given row to the best and second best
+- ngenomes: number of genomes in the model: 1,2 or 3/more
+- p1,p2 and p3: the proportions of the genomes.
+- perr: error rate. Note that error rates here are the probability that a base is mutated at random into one of the 4 bases.
+- X1_2: for the model with 2 genomes, divergence between genome 1 and 2
+- X1_1_2, X1_2_1, X1_2_2, X1_2_3: for the model with 3 genomes, the proportion of sites in which genomes 2 and 3 differ or are the same. For example, X1_1_2 indicates those for which the third genome differ from genome 1 and 2, X1_2_1 those for which the second differs from genome 1 and 3, and so on.
+- value: log likelihood of the model
+- xtime: time to compute the model
+- degree.freedom
+- AIC: Akaike information criterion for the model. Note that because of the composite-likelihood approximation these values should be considered meaningful only in relative terms. Used to sort models from best to worst and to compute relative likelihoods.
+- lik_ratio_test_2g, lik_ratio_test_3g: p-value based on the likelihood ratio test comparing the model with 2genomes (or 3) versus the model in the given row
+- relL_vsbest,relL_vs2ndbest: relative likelihood comparing the model in given row to the best and second best
 
 For more information
 ./mix_noref.R --help
