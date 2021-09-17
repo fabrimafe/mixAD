@@ -24,7 +24,7 @@ The output file is a table structured with the models (1,2 or 3 genomes) represe
 - p1,p2 and p3: the proportions of the genomes.
 - perr: error rate. Note that error rates here are the probability that a base is mutated at random into one of the 4 bases.
 - X1_2: for the model with 2 genomes, divergence between genome 1 and 2
-- X1_1_2, X1_2_1, X1_2_2, X1_2_3: for the model with 3 genomes, the proportion of sites in which genomes 2 and 3 differ or are the same. For example, X1_1_2 indicates those for which the third genome differ from genome 1 and 2, X1_2_1 those for which the second differs from genome 1 and 3, and so on.
+- X1_1_2, X1_2_1, X1_2_2, X1_2_3: for the model with 3 genomes, the proportion of sites in which genomes 2 and 3 differ or are the same. For example, X1_1_2 indicates those for which the third genome differ from genome 1 and 2, X1_2_1 those for which the second differs from genome 1 and 3, and so on. These proportions describe the phylogenetic relationships among lineages, e.g. if X1_1_2>> all others, genomes 1 and 2 are more related.
 - value: log likelihood of the model
 - xtime: time to compute the model
 - degree.freedom
